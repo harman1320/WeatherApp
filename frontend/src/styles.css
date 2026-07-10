@@ -269,5 +269,5 @@ h1 {
 .desc.small { font-size: 0.75rem; margin-top: 0.25rem; }
 
 #btn {
-  display: hidden;
+  display: none;
 }

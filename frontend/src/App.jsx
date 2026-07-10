@@ -121,7 +121,7 @@ export default function App() {
           </button>
         </form>
 
-        {loading && <p className="info">Fetching the latest…</p>}
+        
         {error && <p className="error">{error}</p>}
 
         {weather && (
