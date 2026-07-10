@@ -60,21 +60,21 @@ export default function App() {
     }
   };
 
-  const useMyLocation = () => {
-    if (!navigator.geolocation) {
-      setError("Geolocation not supported");
-      return;
-    }
-    navigator.geolocation.getCurrentPosition(
-      (pos) => fetchByCoords(pos.coords.latitude, pos.coords.longitude),
-      () => setError("Unable to retrieve your location")
-    );
-  };
+  // const useMyLocation = () => {
+  //   if (!navigator.geolocation) {
+  //     setError("Geolocation not supported");
+  //     return;
+  //   }
+  //   navigator.geolocation.getCurrentPosition(
+  //     (pos) => fetchByCoords(pos.coords.latitude, pos.coords.longitude),
+  //     () => setError("Unable to retrieve your location")
+  //   );
+  // };
 
-  useEffect(() => {
-    useMyLocation();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // useEffect(() => {
+  //   useMyLocation();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -85,7 +85,6 @@ export default function App() {
 
   return (
     <div className="app">
-      <p>This is para tag</p>
       <div className="container">
         <header className="topbar">
           <div className="brand">
@@ -117,12 +116,12 @@ export default function App() {
           <button type="submit" className="btn btn-primary">
             Search
           </button>
-          <button type="button" className="btn" id="button" onClick={useMyLocation}>
+          <button type="button" id="button" >
             My location
           </button>
         </form>
 
-        
+        {loading && <p className="info">Fetching the latest…</p>}
         {error && <p className="error">{error}</p>}
 
         {weather && (
