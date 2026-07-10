@@ -60,21 +60,21 @@ export default function App() {
     }
   };
 
-  // const useMyLocation = () => {
-  //   if (!navigator.geolocation) {
-  //     setError("Geolocation not supported");
-  //     return;
-  //   }
-  //   navigator.geolocation.getCurrentPosition(
-  //     (pos) => fetchByCoords(pos.coords.latitude, pos.coords.longitude),
-  //     () => setError("Unable to retrieve your location")
-  //   );
-  // };
+  const useMyLocation = () => {
+    if (!navigator.geolocation) {
+      setError("Geolocation not supported");
+      return;
+    }
+    navigator.geolocation.getCurrentPosition(
+      (pos) => fetchByCoords(pos.coords.latitude, pos.coords.longitude),
+      () => setError("Unable to retrieve your location")
+    );
+  };
 
-  // useEffect(() => {
-  //   useMyLocation();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  useEffect(() => {
+    useMyLocation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
