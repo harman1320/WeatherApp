@@ -7,3 +7,10 @@
 4. `npm start` (or `npm run dev` with nodemon)
 
 Server runs on http://localhost:5000
+
+## API routes
+- `GET /api/weather/city/:city?units=metric|imperial`
+- `GET /api/weather/coords?lat=..&lon=..&units=metric|imperial`
+- `GET /api/forecast/city/:city?units=metric|imperial`
+- `GET /api/forecast/coords?lat=..&lon=..&units=metric|imperial`
+- `GET /api/air/coords?lat=..&lon=..` (OpenWeather AQI scale 1 to 5)
