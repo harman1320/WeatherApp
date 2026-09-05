@@ -240,7 +240,7 @@ export default function App() {
         <header className="topbar">
           <div className="brand">
             <span className="brand-dot" />
-            <span>Cloudy</span>
+            <span>Windy</span>
           </div>
           <button
             className="theme-toggle"
