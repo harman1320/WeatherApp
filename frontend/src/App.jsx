@@ -274,7 +274,7 @@ export default function App() {
 
         <h1>How's the sky today?</h1>
         <p className="subtitle">
-          Search any city or use your location for a fresh look at the weather.
+          Search any city or use your location for a fresh look at the weather
         </p>
 
         <form className="search" onSubmit={handleSubmit}>
